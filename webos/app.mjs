@@ -79,6 +79,7 @@ export function mount(host) {
   }
   function field(parent,label,input) {
     const node=element('label',label);
+    input.setAttribute('aria-label',label);
     node.append(input); parent.append(node); return input;
   }
   const number = (value, step = '1') => element('input','',{type:'number',value:String(value),step});
@@ -122,7 +123,9 @@ export function mount(host) {
   button(header,'New garment',() => run(async () => {
     if (!(await discard())) return;
     const result=await ask('new',template.value);
-    binding=null; dirty=false; setView(result.view); text('New garment');
+    binding=null;
+    host.desktop.updateAccountFileBinding(host.w,{owner,path:null,sha256:null});
+    dirty=false; setView(result.view); text('New garment');
   }));
   const undo=button(header,'Undo',() => run(() => history('undo')));
   const redo=button(header,'Redo',() => run(() => history('redo')));
