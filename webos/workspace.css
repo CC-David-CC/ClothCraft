@@ -1,0 +1,36 @@
+.clothcraft-app {
+  background: #eff3ef;
+  color: #172d29;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: .5rem;
+  min-height: 0;
+  overflow: auto;
+  padding: .65rem;
+}
+.clothcraft-app button,
+.clothcraft-app input,
+.clothcraft-app select { font: inherit; }
+.clothcraft-app button { min-height: 2rem; }
+.clothcraft-app label { align-items: center; display: inline-flex; flex-wrap: wrap; gap: .3rem; }
+.clothcraft-app input[type=number] { max-width: 5.5rem; }
+.clothcraft-app select { max-width: 13rem; }
+.clothcraft-app .clothcraft-toolbar,
+.clothcraft-app .clothcraft-controls { align-items: center; display: flex; flex-wrap: wrap; gap: .4rem .6rem; }
+.clothcraft-app .clothcraft-controls { border-top: 1px solid #b5c9c1; padding-top: .5rem; }
+.clothcraft-app .clothcraft-status { min-height: 1.25em; overflow-wrap: anywhere; }
+.clothcraft-app .clothcraft-views {
+  display: grid;
+  gap: .55rem;
+  grid-template-columns: repeat(auto-fit,minmax(min(16rem,100%),1fr));
+}
+.clothcraft-app .clothcraft-pattern,
+.clothcraft-app .clothcraft-drape { color: inherit; min-width: 0; }
+.clothcraft-app .clothcraft-drape > :not(canvas) { margin: 0 .35rem .3rem 0; }
+.clothcraft-app svg,
+.clothcraft-app canvas { border-radius: .25rem; display: block; height: clamp(12rem,36vh,30rem); margin-top: .3rem; width: 100%; }
+.clothcraft-app svg { background: #d8e6dc; }
+.clothcraft-app svg [role=button] { cursor: pointer; }
+.clothcraft-app svg [role=button]:focus { outline: 3px solid #234b43; }
+.clothcraft-app canvas { background: #192624; }

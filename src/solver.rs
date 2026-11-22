@@ -8,7 +8,7 @@ use crate::{
 use glam::DVec3;
 use rayon::prelude::*;
 use serde::{Deserialize, Serialize};
-use std::time::Instant;
+use crate::clock::Instant;
 
 #[derive(Clone, Debug, Serialize, Deserialize)]
 #[serde(deny_unknown_fields)]

@@ -11,7 +11,7 @@ use glam::DVec3;
 use rayon::prelude::*;
 use serde::{Deserialize, Serialize};
 use std::collections::BTreeSet;
-use std::time::Instant;
+use crate::clock::Instant;
 
 #[derive(Clone, Copy, Debug, Default, Serialize)]
 pub struct DetectionProfile {

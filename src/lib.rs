@@ -28,3 +28,13 @@ pub mod solver;
 pub mod solver_lab;
 pub mod template_catalog;
 pub mod vbd;
+
+#[cfg(all(target_arch = "wasm32", feature = "web"))]
+mod web;
+
+mod clock {
+    #[cfg(not(target_arch = "wasm32"))]
+    pub use std::time::Instant;
+    #[cfg(target_arch = "wasm32")]
+    pub use web_time::Instant;
+}

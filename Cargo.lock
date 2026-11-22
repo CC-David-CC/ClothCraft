@@ -1404,6 +1404,8 @@ dependencies = [
  "tempfile",
  "tracing",
  "tracing-subscriber",
+ "wasm-bindgen",
+ "web-time",
 ]
 
 [[package]]

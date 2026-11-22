@@ -11,7 +11,8 @@ use crate::{
 use glam::{DMat3, DVec3};
 use rayon::prelude::*;
 use serde::{Deserialize, Serialize};
-use std::{collections::BTreeSet, sync::Arc, time::Instant};
+use crate::clock::Instant;
+use std::{collections::BTreeSet, sync::Arc};
 pub mod audit;
 mod coloring;
 pub mod grab;
